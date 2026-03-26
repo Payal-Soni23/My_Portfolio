@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AIChat from "../components/ui/AIChat";
-import BackgroundShader from "../components/canvas/BackgroundShader";
 import StatusBar from "../components/ui/StatusBar";
 
 
@@ -31,7 +30,7 @@ export default function RootLayout({
  return (
     <html lang="en">
       <body className="bg-slate-950 antialiased">
-        <BackgroundShader /> 
+        
         {children}
         <StatusBar/>
         <AIChat />
