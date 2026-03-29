@@ -14,7 +14,7 @@ export default function Education() {
   };
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
+    <section id="education" className="py-12 md:py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         {/* Sidebar Header */}
@@ -31,7 +31,7 @@ export default function Education() {
         {/* Education Content */}
         <motion.div 
           whileHover={{ y: -5 }}
-          className="lg:col-span-8 p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] bg-slate-900/40 border border-white/5 backdrop-blur-xl relative overflow-hidden group"
+          className="lg:col-span-8 p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-slate-900/40 border border-white/5 backdrop-blur-xl relative overflow-hidden group"
         >
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="space-y-4 w-full">

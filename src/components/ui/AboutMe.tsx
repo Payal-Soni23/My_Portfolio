@@ -111,7 +111,7 @@ export default function AboutMe() {
   const networkY = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-screen bg-slate-950 flex flex-col items-center justify-center py-12 md:py-20 overflow-hidden px-4">
+    <section id="about" ref={containerRef} className="relative w-full min-h-screen bg-slate-950 flex flex-col items-center justify-center py-12 md:py-20 overflow-hidden px-4">
       <motion.div style={{ y: networkY }} className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <svg viewBox="0 0 1000 1000" className="w-full h-full object-cover">
           <path d="M100,200 Q300,50 500,300 T900,100" stroke="#334155" fill="none" strokeWidth="0.5" />
@@ -169,9 +169,21 @@ export default function AboutMe() {
 
             <div className="flex items-center justify-center lg:justify-start gap-3 md:gap-4 pt-2">
               {[
-                { icon: BrandIcons.github, href: "#" },
-                { icon: BrandIcons.linkedin, href: "#" },
-                { icon: <Mail size={18} />, href: "#" },
+                { 
+    icon: BrandIcons.github, 
+    href: "https://github.com/Payal-Soni23", // Replace with your GitHub URL
+    label: "GitHub" 
+  },
+  { 
+    icon: BrandIcons.linkedin, 
+    href: "https://www.linkedin.com/in/payal-soni-25a8232ab", // Replace with your LinkedIn URL
+    label: "LinkedIn" 
+  },
+  { 
+    icon: <Mail size={18} />, 
+    href: "mailto:sonipayal2693@gmail.com", // Use 'mailto:' for email
+    label: "Email" 
+  },
               ].map((link, i) => (
                 <motion.a
                   key={i}

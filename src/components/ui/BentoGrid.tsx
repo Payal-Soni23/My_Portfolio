@@ -59,7 +59,7 @@ const skillModules = [
 
 export default function TechEcosystem() {
   return (
-    <section className="py-16 md:py-24 px-4 w-full max-w-7xl mx-auto">
+    <section id="skills" className="py-16 md:py-24 px-4 w-full max-w-7xl mx-auto">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 md:mb-16 gap-6 border-b border-white/5 pb-8">
         <motion.div 
@@ -102,7 +102,7 @@ export default function TechEcosystem() {
               scale: 1.01,
               transition: { duration: 0.2 } 
             }}
-            className={`group relative overflow-hidden rounded-[2rem] md:rounded-4xl bg-slate-900/40 border border-white/5 backdrop-blur-xl p-6 md:p-8 transition-all duration-500 ${module.glow}`}
+            className={`group relative overflow-hidden rounded-4xl md:rounded-4xl bg-slate-900/40 border border-white/5 backdrop-blur-xl p-6 md:p-8 transition-all duration-500 ${module.glow}`}
           >
             {/* Live Status Indicator */}
             <div className="absolute top-5 right-6 flex items-center gap-2">
@@ -137,7 +137,7 @@ export default function TechEcosystem() {
             <motion.div 
               animate={{ top: ["-10%", "110%"] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="absolute left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none hidden md:block" 
+              className="absolute left-0 w-full h-0.5 bg-linear-to-r from-transparent via-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none hidden md:block" 
             />
           </motion.div>
         ))}

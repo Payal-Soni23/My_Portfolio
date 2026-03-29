@@ -85,7 +85,7 @@ export default function DeveloperLaptop({ className = "", style }: { className?:
   <div className="flex-1 p-3 sm:p-4 bg-[#0d1117] overflow-hidden">
     <div className="flex gap-2 sm:gap-4">
       {/* Line Numbers */}
-      <div className="text-slate-700 select-none text-right min-w-[12px] opacity-50">
+      <div className="text-slate-700 select-none text-right min-w-3 opacity-50">
         1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11
       </div>
       

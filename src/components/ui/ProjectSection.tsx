@@ -22,7 +22,7 @@ const projects = [
     type: "Full Stack Dev",
     icon: <ShoppingCart size={20} />,
     link: "#",
-    github: "#"
+    github: "https://github.com/Payal-Soni23/jewellery"
   },
   {
     title: "Gamified Learning (SIH)",
@@ -30,7 +30,7 @@ const projects = [
     tags: ["Three.js", "R3F", "Framer Motion"],
     type: "3D Interaction",
     icon: <Gamepad2 size={20} />,
-    link: "#",
+    link: "https://ecora-m-lynx.netlify.app/",
     github: "#"
   }
 ];
@@ -132,7 +132,7 @@ export default function ProjectTimeline() {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="py-16 md:py-32 px-4 md:px-6 bg-slate-950 relative overflow-hidden">
+    <section id="projects" ref={containerRef} className="py-16 md:py-32 px-4 md:px-6 bg-slate-950 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col gap-2 mb-12 md:mb-16 items-center md:items-start text-center md:text-left">
           <div className="w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
@@ -144,10 +144,10 @@ export default function ProjectTimeline() {
 
         <div className="relative">
           {/* THE VERTICAL LINE (Modified for Mobile) */}
-          <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-[1px] h-full bg-slate-800">
+          <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-px h-full bg-slate-800">
             <motion.div 
               style={{ height: pathHeight }} 
-              className="w-full bg-gradient-to-b from-cyan-500 via-purple-500 to-emerald-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]" 
+              className="w-full bg-linear-to-b from-cyan-500 via-purple-500 to-emerald-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]" 
             />
           </div>
 

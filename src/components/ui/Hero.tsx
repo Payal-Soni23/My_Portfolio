@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionV
 import { useEffect, useRef, useState, useCallback } from "react";
 import DeveloperLaptop from "../canvas/DeveloperLaptop";
 import { Download, Rocket, Cpu, Menu, X } from "lucide-react";
+import Link from 'next/link';
 
 const NAV_LINKS = [
   { name: "Home", href: "#" },
@@ -91,7 +92,11 @@ export default function Hero() {
             ))}
           </div>
           <div className="flex items-center gap-4">
-            <button className="hidden md:block text-xs font-bold uppercase tracking-widest px-4 py-2 border border-cyan-500/50 text-cyan-400 rounded-lg">Contact</button>
+            <Link href="#contact">
+              <button className="hidden md:block text-xs font-bold uppercase tracking-widest px-4 py-2 border border-cyan-500/50 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                Contact
+              </button>
+            </Link>
             <button className="md:hidden z-60 p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

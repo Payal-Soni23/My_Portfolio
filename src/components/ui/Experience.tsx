@@ -30,7 +30,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
+    <section id="experience" className="py-12 md:py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         {/* Sidebar Header */}
@@ -52,7 +52,7 @@ export default function Experience() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group relative p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-slate-900/40 border border-white/5 backdrop-blur-xl hover:border-emerald-500/30 transition-all duration-500"
+              className="group relative p-6 md:p-8 rounded-3xl md:rounded-[2.5rem] bg-slate-900/40 border border-white/5 backdrop-blur-xl hover:border-emerald-500/30 transition-all duration-500"
             >
               {/* Header */}
               <div className="flex flex-col sm:flex-row justify-between items-start mb-6 gap-3">
