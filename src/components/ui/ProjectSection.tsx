@@ -1,40 +1,48 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { ExternalLink, Layers, Bot, ShoppingCart, Gamepad2 } from "lucide-react";
+import { ExternalLink, Layers, Bot, ShoppingCart, Gamepad2, Database } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 // --- PROJECT DATA ---
 const projects = [
   {
-    title: "AI Chatbot using LLM APIs",
-    description: "Developed an AI-powered chatbot with real-time conversational capabilities. Implemented context-aware responses using OpenAI and Node.js.",
+    title: "Green 3D Cloud Storage Management",
+    description: "Built a 3D cloud storage visualization system to monitor and optimize data usage. Leveraged Three.js for interactive rendering and designed a sustainable storage representation model.",
+    tags: ["React", "Three.js", "Node.js", "3D UI"],
+    type: "3D Systems",
+    icon: <Database size={20} />,
+    link: "#",
+    github: "https://github.com/Payal-Soni23/Green-Ops-3D-Infrastructure-Monitor.git"
+  },
+  {
+    title: "AI Sales Chatbot using LLM APIs",
+    description: "Developed a context-aware AI chatbot with real-time conversations using OpenAI APIs.An AI-powered multilingual conversational bot designed to convert users into solar installation leads through a structured, high-converting sales flow.",
     tags: ["React", "Node.js", "OpenAI", "Prompt Eng."],
     type: "AI & Intelligence",
     icon: <Bot size={20} />,
     link: "#",
-    github: "#"
+    github: "https://github.com/Payal-Soni23/AI-Sales-Chatbot.git"
   },
   {
     title: "Jewelry E-Commerce Platform",
-    description: "Full-stack platform with secure JWT authentication and product filtering. Designed reusable UI components for a luxury luxury feel.",
-    tags: ["React", "Express", "JWT", "PostgreSQL"],
+    description: "Engineered a full-stack e-commerce platform with JWT authentication, product filtering, and scalable backend APIs. Designed reusable UI components for a premium user experience.",
+    tags: ["React", "Node.js", "Express", "JWT"],
     type: "Full Stack Dev",
     icon: <ShoppingCart size={20} />,
-    link: "#",
+    link: "https://krishnajewellery.vercel.app/",
     github: "https://github.com/Payal-Soni23/jewellery"
   },
   {
-    title: "Gamified Learning (SIH)",
-    description: "A 3D interactive learning interface built for SIH. Focused on immersion through Three.js and real-time state management.",
-    tags: ["Three.js", "R3F", "Framer Motion"],
+    title: "Gamified Learning Platform (SIH)",
+    description: "Developed a 3D interactive learning interface using Three.js, focusing on immersive UX and real-time interaction. Collaborated on UI/UX and system flow in a team setting.",
+    tags: ["Three.js", "React", "R3F", "Framer Motion"],
     type: "3D Interaction",
     icon: <Gamepad2 size={20} />,
     link: "https://ecora-m-lynx.netlify.app/",
     github: "#"
   }
 ];
-
 // --- 3D TILT CARD COMPONENT ---
 function ProjectCard({ title, description, tags, type, icon, github, link }: any) {
   const x = useMotionValue(0);
